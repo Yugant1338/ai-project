@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Video Modal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/component2/assets/css/styles.css">
+    <link rel="stylesheet" href="/component1/assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="/component1/assets/css/styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="header-area header-sticky">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <nav class="main-nav">
+                <!-- ***** Logo Start ***** -->
+                <a href="#" class="logo">
+                  <img src= "/component1/assets/images/header_logo.png" alt="Visibles" class="img-fluid" style="max-height: 2rem;">
+                  <!-- Logo Goes here -->
+                </a>
+                <!-- ***** Logo End ***** -->
+                <!-- ***** Menu Start ***** -->
+                <ul class="nav">
+                  <li><a href="#welcome" class="active">Home</a></li>
+                  <!-- <li><a href="#features">About</a></li>
+                  <li><a href="#translate">Translate</a></li>
+                  <li><a href="#testimonials">Testimonials</a></li>
+                  <li><a href="#contact-us">Contact Us</a></li> -->
+                </ul>
+                <a class="menu-trigger">  
+                  <span>Menu</span>
+                </a>
+                <!-- ***** Menu End ***** -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <div class="container mt-5" id="welcome">
+        <h1 class="mb-4 text-center">Translated Video on Submit</h1>
+        <input type="text" id="textInput" class="form-control mb-3" placeholder="Enter something...">
+        <div class="text-center">
+            <button class="btn btn-custom" onclick="showModal()">Submit</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Enjoy the Video!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <video id="videoElement" controls autoplay>
+                        <source src="/component2/assets/gesture/hello.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" onclick="closeModal()">Exit</button>
+                    <button class="btn btn-primary" onclick="closeModal()">Rewrite Sentence</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/component2/assets/js/script.js"></script>
+</body>
+</html>
