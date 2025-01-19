@@ -20,6 +20,11 @@ body {
     font-size: 18px;
 }
 
+.btn-custom:hover{
+    background-color: #faccc2;
+    border: solid 1px #333
+}
+
 .modal-content {
     border-radius: 15px;
 }
